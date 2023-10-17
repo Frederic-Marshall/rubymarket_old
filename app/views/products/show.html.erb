@@ -1,0 +1,68 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="<%= dom_id @product %>">
+  <div class="show-block product-container">
+		<%= link_to products_path do %>
+			<%= image_tag("arrow-left.svg", class: "show-btn arrow-backButton") %>
+		<% end %>
+
+		<div class="show-image">
+			<%= image_tag @product.image.url(:large) if @product.image? %>
+		</div>
+		
+		<div class="show-text">
+			<div class="show-names">
+				<span class="show-productName">
+					<%= @product.name %>
+				</span>
+				|
+				<span class="show-productBrand">
+					<% if @product.category.present? %>
+						<%= link_to @product.category.name, @product.category %>
+					<% end %>
+				</span>
+			</div>
+
+			<div class="show-functions">
+				<div class="show-buttonCart">
+					<div class="show-prices">
+						<div class="show-price">
+							<h2><%= @product.price %> ₽</h2>
+						</div>
+
+						<del class="show-oldPrice">
+							<h3><%= @product.old_price %> ₽</h3>
+						</del>
+					</div>
+
+					<%= link_to "Добавить в корзину", root_path, class: "show-btn cardBtn" %>
+					
+					<%= link_to "Купить сейчас", root_path, class: "show-btn cardBtn" %>
+				</div>
+
+				<div class="show-shopInfo">
+					<%= image_tag("shop-icon", class: "show-imgShop") %>
+
+					<%= link_to "Название магазина", root_path, class: "show-btn show-buyButton" %>
+				</div>
+				<div class="show-adminButtons">
+					<%= button_to @product, method: :delete, class: "button-to" do %>
+						<%= image_tag("trash.svg", class: "show-btn trashButton") %>
+					<% end %>
+
+					<%= link_to edit_product_path(@product) do %>
+						<%= image_tag("pencil.svg", class: "show-btn trashButton") %>
+					<% end %>
+				</div>
+			</div>			
+		</div>
+	</div>
+
+	<div class="show-block about-product">
+		<h2>О товаре</h2>
+
+		<div class="show-description">
+			<%= @product.description %>
+		</div>
+	</div>
+</div>

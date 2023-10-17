@@ -1,0 +1,36 @@
+<h1><%= t('.Categories') %></h1>
+
+<section id="categories">
+  <table class="indexCategory-table">
+    <thead>
+      <tr>
+        <th>№</th>
+        <th>Имя категории</th>
+        <th>Старшая категория</th>
+        <th>Действия</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each_with_index do |category, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= category.name %></td>
+          <td><%= category.parent.name if category.parent.present? %></td>
+          <td>
+            <div class="indexCategory-actions">
+              <%= link_to "Редактировать", edit_category_path(category), class: "category-btn categoryAction-edit" %>
+              <%= button_to "Удалить", category_path(category),
+                method: :delete,
+                form: {data: {turbo_confirm: "Вы уверены?"}},
+								class: "button-to category-btn  categoryAction-delete" %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>
+
+<div class="indexCategory-new">
+  <%= link_to "Новая категория", new_category_path, class: "btn_layout new_product_btn" %>
+</div>

@@ -1,0 +1,17 @@
+<%= link_to "Новый товар", new_product_path, class: "btn_layout new_product_btn" %>
+
+<%= link_to "Все категории", categories_path, class: "btn_layout new_product_btn" %>
+
+<div class="banner">
+	<%= image_tag("Banner.jpg", class: "image-banner") %>
+</div>
+
+<ul class="cards">
+	<% @products.each do |product| %>
+    <li class="cards_item">						
+		<%= render product %>
+    </li>		
+	<% end %>
+  </ul>
+</div>
+

@@ -1,0 +1,72 @@
+section#categories {
+	display: flex;
+	justify-content: center;
+	margin: 2em 0;
+}
+
+.indexCategory-table {
+	width: 65%;
+	margin-bottom: 20px;
+	border: 5px solid #fff;
+	border-top: 5px solid #fff;
+	border-bottom: 3px solid #fff;
+	border-collapse: collapse; 
+	outline: 3px solid #DD0202;
+	font-size: 22px;
+	background: #fff!important;
+}
+
+.indexCategory-table thead {
+	background: linear-gradient(39deg, rgba(27, 0, 0, 0.92) -27.51%, 
+																		#DD0202 85.67%);
+	color: white;
+}
+
+.indexCategory-table th {
+	font-weight: bold;
+	padding: .75em;
+	border: none;
+	text-align: left;
+	font-size: 15px;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #DD0202;
+}
+
+.indexCategory-table td {
+	padding: .75em;
+	border: none;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	font-size: 15px;
+}
+
+.indexCategory-table tbody tr:nth-child(even){
+	background: #f8f8f8!important;
+}
+
+.indexCategory-actions {
+	display: flex;
+}
+
+.category-btn {
+	padding: .25em;
+	margin: .4em;
+	font-size: 19px;
+}
+
+.categoryAction-edit {
+	color: green;
+	outline: 1px solid green;
+	border-radius: 7px;
+}
+
+.categoryAction-delete {
+	color: #DD0202;
+	outline: 1px solid #DD0202;
+	border-radius: 7px;
+}
+
+.indexCategory-new {
+	display: flex;
+	justify-content: center;
+}
