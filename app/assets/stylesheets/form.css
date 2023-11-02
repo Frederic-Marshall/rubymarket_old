@@ -159,3 +159,18 @@
     border: none;
     margin: 1em;
 }
+
+.form-avatar {
+	display: flex;
+	align-items: center;
+}
+
+.avatar-group {
+	width: 50%;
+}
+
+.rounded-circle {
+	border-radius: 50%;
+	border: 2px solid #f84141;
+	box-shadow: 4px 4px 8px 0px #f84141;
+}

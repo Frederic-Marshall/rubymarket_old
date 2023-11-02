@@ -14,3 +14,11 @@
 	background: linear-gradient(39deg, rgba(27, 0, 0, 0.92) -27.51%, 
 																			#DD0202 85.67%);
 }
+
+button {
+	cursor: pointer;
+}
+
+.link {
+	color: black;
+}

@@ -1,1 +1,27 @@
-<%= @user.email %>
+<div class="user-container">
+	<div class="user-group show-userInfo">
+		<div class="show-userAvatar">
+			<% if @user.avatar.attached? %>
+				<div class="avatar-group">
+					<%= image_tag(@user.avatar_thumbnail, class: "rounded-circle userAvatar") %>
+				</div>
+			<% else %>
+				<div class="avatar-group">
+					<%= image_tag("default_profile.png", height: 150, width: 150, class: "rounded-circle userAvatar") %>
+				</div>
+			<% end %>
+		</div>
+
+		<div class="show-userEmail">
+			<%= @user.email %>
+		
+			<%= link_to edit_user_registration_path(@user) do %>
+				<%= image_tag("pencil.svg", class: "show-btn userEdit-btn white-img") %>
+			<% end %>
+		</div>
+	</div>
+	
+	<div class="user-group show-userInfo">
+		
+	</div>
+</div>

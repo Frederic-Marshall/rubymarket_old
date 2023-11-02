@@ -1,0 +1,51 @@
+.user-group {
+	color: white;
+}
+
+.userEdit-btn {
+	filter: invert(1);
+	width: 40px;
+	margin: .7em;
+	border: 1px solid black;
+	border-radius: 10px;
+	transition: all .2s linear;
+}
+
+.userEdit-btn:hover {
+	border: 1px solid white;
+	background-color: #fff;
+	filter: invert(0);
+}
+
+.user-container {
+	display: flex;
+}
+
+.show-userInfo {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	align-items: center;
+	padding: 1em;
+	margin: 2em;
+	width: 30%;
+	background-color: #f84141;
+	border-radius: 10px;
+	transition: all .2s linear;
+}
+
+.show-userInfo:hover {
+	box-shadow: 4px 4px 8px 0px #f84141;
+}
+
+.userAvatar {
+	width: 150px;
+	height: 150px;
+}
+
+.show-userEmail {
+	font-size: 19px;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+}

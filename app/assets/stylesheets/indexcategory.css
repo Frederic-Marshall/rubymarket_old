@@ -58,12 +58,24 @@ section#categories {
 	color: green;
 	outline: 1px solid green;
 	border-radius: 7px;
+	transition: all .2s linear;
+}
+
+.categoryAction-edit:hover {
+	background-color: green;
+	color: white;
 }
 
 .categoryAction-delete {
 	color: #DD0202;
 	outline: 1px solid #DD0202;
 	border-radius: 7px;
+	transition: all .2s linear;
+}
+
+.categoryAction-delete:hover {
+	background-color: #DD0202;
+	color: white;
 }
 
 .indexCategory-new {

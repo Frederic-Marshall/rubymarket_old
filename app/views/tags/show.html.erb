@@ -1,0 +1,15 @@
+<%= link_to products_path do %>
+	<%= image_tag("arrow-left.svg", class: "show-btn arrow-backBtn") %>
+<% end %>
+
+<h1><%= @tag.name %></h1>
+
+<% if @tag.products.empty? %>
+  <h2>Ничего не найдено</h2>
+<% else %>
+	<ul class="cards">
+		<li class="cards_item">						
+			<%= render @tag.products %>
+		</li>		
+	</ul>
+<% end %>

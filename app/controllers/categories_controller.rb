@@ -7,6 +7,7 @@ class CategoriesController < ApplicationController
 	end
 
 	def show
+		@products = Product.where(category_id: [@category.subtree_ids])
 	end
 
 	def new

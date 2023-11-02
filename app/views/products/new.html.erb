@@ -1,9 +1,8 @@
+<%= link_to products_path do %>
+	<%= image_tag("arrow-left.svg", class: "show-btn arrow-backBtn") %>
+<% end %>
+
 <h1>New product</h1>
 
 <%= render "form", product: @product %>
 
-<br>
-
-<div>
-  <%= link_to "Back to products", products_path %>
-</div>

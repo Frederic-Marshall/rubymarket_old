@@ -2,16 +2,13 @@
 
 <%= link_to "Все категории", categories_path, class: "btn_layout new_product_btn" %>
 
-<div class="banner">
-	<%= image_tag("Banner.jpg", class: "image-banner") %>
-</div>
-
 <ul class="cards">
 	<% @products.each do |product| %>
-    <li class="cards_item">						
-		<%= render product %>
-    </li>		
+    <li class="cards_item">
+			<%= link_to product, class: "link" do %>					
+				<%= render product %>
+			<% end %>
+		</li>		
 	<% end %>
-  </ul>
-</div>
+</ul>
 

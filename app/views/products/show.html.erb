@@ -65,4 +65,8 @@
 			<%= @product.description %>
 		</div>
 	</div>
+
+	<div>
+    <%= raw @product.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'tag tag-pill tag-primary' }.join(' ') %> 
+	</div>
 </div>

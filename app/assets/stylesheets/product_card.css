@@ -36,7 +36,11 @@
 	margin: 1em 0.5em;
 	background: linear-gradient(39deg, #DD0202 -27.51%, 
 																		 rgba(27, 0, 0, 0.92) 85.67%);	
-	transition: all 1s ease-in;
+	transition: all .1s ease-in;
+}
+
+.card_btn:hover {
+	box-shadow: 4px 4px 8px 0px #f84141;
 }
 
 .cards {
@@ -56,12 +60,18 @@
 .card {
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: flex;
+	display: flex;
   flex-direction: column;
   overflow: hidden;
 	width: 271px;
-	height: 373px;
+	border: 1px solid #DD0202;
+	transition: all .2s linear;
+	padding: .8em;
+}
+
+.card:hover {
+	box-shadow: 4px 4px 8px 0px #f84141;
+	border: none;
 }
 
 .card_content {
